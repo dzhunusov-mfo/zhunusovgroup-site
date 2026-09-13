@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ТОО «Eco Land» — выкуп земельных массивов, смена целевого назначения, раздел на участки и продажа земли под ИЖС, ЛПХ и производство в Алматинской области.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%232E6F4E%22/%3E%3Ctext y=%2272%22 x=%2250%22 text-anchor=%22middle%22 font-size=%2262%22 fill=%22%23fff%22 font-family=%22Georgia,serif%22%3EE%3C/text%3E%3C/svg%3E">
+<style>*{box-sizing:border-box}html{scroll-behavior:smooth}</style>
+<title>Eco Land — земля под застройку</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ground:#F1F2EE;
+    --surface:#FFFFFF;
+    --surface-2:#E6E9E1;
+    --ink:#121A16;
+    --text:#27322B;
+    --muted:#5E6B63;
+    --line:#D6DAD1;
+    --line-strong:#BFC6BA;
+    --accent:#2E6F4E;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#DDE8E0;
+    --amber:#A96D22;
+    --amber-soft:#F0E3CD;
+    --shadow:0 1px 2px rgba(18,26,22,.05), 0 8px 24px -16px rgba(18,26,22,.35);
+    --maxw:1180px;
+    --r:4px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#111714;
+      --surface:#171F1A;
+      --surface-2:#1D2721;
+      --ink:#EDF1EC;
+      --text:#D7E0D9;
+      --muted:#94A399;
+      --line:#2A342E;
+      --line-strong:#3A463E;
+      --accent:#68B78C;
+      --accent-ink:#0E1712;
+      --accent-soft:#1C2E24;
+      --amber:#D69B4E;
+      --amber-soft:#2C2418;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#111714;
+    --surface:#171F1A;
+    --surface-2:#1D2721;
+    --ink:#EDF1EC;
+    --text:#D7E0D9;
+    --muted:#94A399;
+    --line:#2A342E;
+    --line-strong:#3A463E;
+    --accent:#68B78C;
+    --accent-ink:#0E1712;
+    --accent-soft:#1C2E24;
+    --amber:#D69B4E;
+    --amber-soft:#2C2418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--text);
+    font-family:"Onest","Segoe UI",system-ui,-apple-system,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:"Bitter",Georgia,"Times New Roman",serif;color:var(--ink);text-wrap:balance;margin:0;font-weight:600;letter-spacing:-.01em}
+  h1{font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.1}
+  h2{font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.2}
+  h3{font-size:1.08rem;line-height:1.35;font-weight:600}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding-inline:24px}
+  .eyebrow{
+    font-family:"JetBrains Mono",ui-monospace,monospace;
+    font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  }
+  .lede{font-size:1.06rem;color:var(--muted);max-width:62ch}
+
+  /* ---------- header ---------- */
+  .site-head{
+    position:sticky;top:0;z-index:20;
+    background:color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-row{display:flex;align-items:center;gap:24px;height:68px}
+  .brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;margin-right:auto}
+  .brand-mark{
+    font-family:"Bitter",serif;font-weight:600;font-size:1.18rem;color:var(--ink);
+    letter-spacing:.02em;
+  }
+  .brand-mark span{color:var(--accent)}
+  .brand-sub{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .nav{display:flex;gap:22px}
+  .nav a{text-decoration:none;color:var(--muted);font-size:.92rem;padding-block:4px;border-bottom:1px solid transparent}
+  .nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+  .head-cta{
+    font-family:"JetBrains Mono",monospace;font-size:.88rem;text-decoration:none;color:var(--ink);
+    white-space:nowrap;border:1px solid var(--line-strong);padding:8px 14px;border-radius:var(--r);
+  }
+  .head-cta:hover{border-color:var(--accent);color:var(--accent)}
+  @media (max-width:940px){ .nav{display:none} }
+  @media (max-width:520px){ .head-cta{display:none} }
+
+  /* ---------- hero ---------- */
+  .hero{padding-block:64px 56px;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:56px;align-items:center}
+  .hero-copy{display:flex;flex-direction:column;gap:22px}
+  .hero h1{max-width:16ch}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:2px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+    padding:12px 20px;border-radius:var(--r);font-weight:500;font-size:.95rem;
+    border:1px solid transparent;
+  }
+  .btn-primary{background:var(--accent);color:var(--accent-ink)}
+  .btn-primary:hover{filter:brightness(1.08)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .hero-figure{margin:0}
+  .hero-figure svg{width:100%;height:auto;max-width:100%;display:block}
+  .figcap{font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--muted);letter-spacing:.06em;margin-top:10px}
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:36px}
+    .hero-figure{order:-1}
+  }
+
+  /* ---------- claims strip ---------- */
+  .claims{border-bottom:1px solid var(--line);background:var(--surface)}
+  .claims-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .claim{padding:26px 28px 26px 0;display:flex;flex-direction:column;gap:6px}
+  .claim + .claim{border-left:1px solid var(--line);padding-left:28px}
+  .claim strong{font-family:"Bitter",serif;font-weight:600;color:var(--ink);font-size:1.02rem}
+  .claim span{font-size:.9rem;color:var(--muted)}
+  @media (max-width:760px){
+    .claims-row{grid-template-columns:1fr}
+    .claim{padding:20px 0}
+    .claim + .claim{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:20px}
+  }
+
+  /* ---------- generic section ---------- */
+  .section{padding-block:72px;border-bottom:1px solid var(--line)}
+  .section-head{display:flex;flex-direction:column;gap:12px;max-width:64ch;margin-bottom:40px}
+
+  /* ---------- directions ---------- */
+  .dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .dir{display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:2px solid var(--accent)}
+  .dir:nth-child(2){border-top-color:var(--amber)}
+  .dir:nth-child(3){border-top-color:var(--line-strong)}
+  .dir-tag{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .dir p{font-size:.95rem;color:var(--muted)}
+  .dir ul{margin:4px 0 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:7px}
+  .dir li{font-size:.9rem;padding-left:16px;position:relative;color:var(--text)}
+  .dir li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+  @media (max-width:880px){ .dirs{grid-template-columns:1fr;gap:32px} }
+
+  /* ---------- process ---------- */
+  .process{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);background:var(--surface);border-radius:var(--r);overflow:hidden}
+  .step{padding:26px 22px;display:flex;flex-direction:column;gap:10px}
+  .step + .step{border-left:1px solid var(--line)}
+  .step-n{font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--accent);letter-spacing:.08em}
+  .step h3{font-size:1rem}
+  .step p{font-size:.88rem;color:var(--muted)}
+  @media (max-width:1000px){
+    .process{grid-template-columns:1fr 1fr}
+    .step + .step{border-left:0}
+    .step{border-top:1px solid var(--line)}
+    .step:nth-child(-n+2){border-top:0}
+    .step:nth-child(even){border-left:1px solid var(--line)}
+  }
+  @media (max-width:560px){
+    .process{grid-template-columns:1fr}
+    .step:nth-child(even){border-left:0}
+    .step:nth-child(2){border-top:1px solid var(--line)}
+  }
+
+  /* ---------- why ---------- */
+  .why{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+  .why-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow)}
+  .why-item.is-lead{border-color:var(--accent);background:var(--accent-soft)}
+  .why-item p{font-size:.94rem;color:var(--muted)}
+  .why-item.is-lead p{color:var(--text)}
+  .badge{
+    align-self:flex-start;font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--amber);background:var(--amber-soft);
+    padding:4px 9px;border-radius:2px;
+  }
+  @media (max-width:780px){ .why{grid-template-columns:1fr} }
+
+  /* ---------- group ---------- */
+  .group-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+  .group-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  .group-list a{
+    display:flex;align-items:baseline;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);
+    text-decoration:none;
+  }
+  .group-list a:hover .g-name{color:var(--accent)}
+  .g-name{font-family:"Bitter",serif;font-weight:500;color:var(--ink);font-size:1rem;min-width:190px}
+  .g-what{font-size:.88rem;color:var(--muted);margin-right:auto}
+  .g-dom{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--muted)}
+  @media (max-width:880px){
+    .group-grid{grid-template-columns:1fr;gap:36px}
+    .g-name{min-width:0}
+    .group-list a{flex-wrap:wrap;gap:4px 14px}
+    .g-what{flex-basis:100%;order:3}
+  }
+
+  /* ---------- contacts ---------- */
+  .contacts{background:var(--surface);border-bottom:1px solid var(--line)}
+  .contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:56px;align-items:start}
+  .contact-list{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+  .contact-row{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .contact-row dt{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);min-width:120px}
+  .contact-row dd{margin:0;font-size:1rem;color:var(--ink)}
+  .contact-row dd a{text-decoration:none}
+  .contact-row dd a:hover{color:var(--accent)}
+  .contact-card{border:1px solid var(--line-strong);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:14px;background:var(--ground)}
+  .contact-card p{font-size:.94rem;color:var(--muted)}
+  @media (max-width:880px){ .contact-grid{grid-template-columns:1fr;gap:32px} }
+
+  /* ---------- footer ---------- */
+  .site-foot{padding-block:34px;font-size:.85rem;color:var(--muted)}
+  .foot-row{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center}
+  .foot-row a{text-decoration:none}
+  .foot-row a:hover{color:var(--accent)}
+  .foot-note{margin-left:auto;font-family:"JetBrains Mono",monospace;font-size:.72rem}
+
+  :where(a,button):focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="#top">
+      <span class="brand-mark">ECO <span>LAND</span></span>
+      <span class="brand-sub">Zhunusov Group</span>
+    </a>
+    <nav class="nav">
+      <a href="#napravleniya">Направления</a>
+      <a href="#kak-rabotaem">Как мы работаем</a>
+      <a href="#pochemu">Почему мы</a>
+      <a href="#gruppa">О компании</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <a class="head-cta" href="tel:+77019522339">+7 701 952 23 39</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">ТОО «Eco Land» · Алматы и Алматинская область</p>
+        <h1>Земля, доведённая до состояния «можно строить»</h1>
+        <p class="lede">Мы выкупаем крупные земельные массивы, переводим их в нужное целевое назначение, делим на участки с отдельными кадастровыми номерами и готовим к застройке. Покупатель получает участок с документами, а не обещание разобраться с ними позже.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/77019522339">Подобрать участок</a>
+          <a class="btn btn-ghost" href="#kak-rabotaem">Как мы работаем</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <svg viewBox="0 0 520 400" role="img" aria-label="Схема разбивки земельного массива на участки">
+          <defs>
+            <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+              <path d="M26 0H0V26" fill="none" stroke="var(--line)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect x="0" y="0" width="520" height="400" fill="url(#grid)"/>
+          <path d="M-10 78 C 90 52, 180 96, 285 66 S 460 40, 534 62" fill="none" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="1 5"/>
+          <path d="M-10 50 C 100 24, 190 70, 300 38 S 470 14, 534 34" fill="none" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="1 5"/>
+
+          <g transform="rotate(-6 260 220)">
+            <rect x="14" y="186" width="500" height="30" fill="var(--surface-2)"/>
+            <line x1="14" y1="201" x2="514" y2="201" stroke="var(--muted)" stroke-width="1" stroke-dasharray="12 10"/>
+
+            <g fill="var(--surface)" stroke="var(--accent)" stroke-width="1.2">
+              <rect x="32" y="108" width="72" height="74"/>
+              <rect x="110" y="108" width="72" height="74"/>
+              <rect x="188" y="108" width="72" height="74"/>
+              <rect x="266" y="108" width="72" height="74" fill="var(--amber-soft)" stroke="var(--amber)" stroke-width="1.8"/>
+              <rect x="344" y="108" width="72" height="74"/>
+              <rect x="422" y="108" width="72" height="74"/>
+              <rect x="32" y="220" width="72" height="74"/>
+              <rect x="110" y="220" width="72" height="74"/>
+              <rect x="188" y="220" width="72" height="74"/>
+              <rect x="266" y="220" width="72" height="74"/>
+              <rect x="344" y="220" width="72" height="74"/>
+              <rect x="422" y="220" width="72" height="74"/>
+            </g>
+
+            <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--muted)">
+              <text x="38" y="122">01</text><text x="116" y="122">02</text><text x="194" y="122">03</text>
+              <text x="272" y="122" fill="var(--amber)">04</text><text x="350" y="122">05</text><text x="428" y="122">06</text>
+              <text x="38" y="234">07</text><text x="116" y="234">08</text><text x="194" y="234">09</text>
+              <text x="272" y="234">10</text><text x="350" y="234">11</text><text x="428" y="234">12</text>
+            </g>
+            <text x="272" y="152" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--amber)">6,0 сот</text>
+            <text x="20" y="204" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--muted)" transform="translate(0,-12)">внутриквартальная дорога</text>
+          </g>
+
+          <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--muted)">
+            <line x1="32" y1="370" x2="132" y2="370" stroke="var(--line-strong)" stroke-width="1.5"/>
+            <line x1="32" y1="366" x2="32" y2="374" stroke="var(--line-strong)" stroke-width="1.5"/>
+            <line x1="132" y1="366" x2="132" y2="374" stroke="var(--line-strong)" stroke-width="1.5"/>
+            <text x="140" y="373">50 м</text>
+            <text x="486" y="374" fill="var(--accent)">С</text>
+            <path d="M490 366 L486 356 L482 366 Z" fill="var(--accent)"/>
+          </g>
+        </svg>
+        <figcaption class="figcap">Схема: массив после раздела — участки с отдельными кадастровыми номерами</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="claims">
+    <div class="wrap claims-row">
+      <div class="claim">
+        <strong>Продаём собственную землю</strong>
+        <span>Массивы в собственности компании, не посредничество и не переуступка чужих прав.</span>
+      </div>
+      <div class="claim">
+        <strong>Целевое назначение под ваш сценарий</strong>
+        <span>Переводим землю под ИЖС, ЛПХ или производственные цели до выхода участков в продажу.</span>
+      </div>
+      <div class="claim">
+        <strong>Рассрочка внутри группы</strong>
+        <span>В группе работает собственная микрофинансовая организация — покупку можно разбить на платежи без банка.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="napravleniya">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Направления</p>
+        <h2>Что мы продаём</h2>
+        <p class="lede">Три сценария — от одного участка под дом до массива для партнёрского проекта.</p>
+      </div>
+      <div class="dirs">
+        <article class="dir">
+          <p class="dir-tag">01 · Частным покупателям</p>
+          <h3>Участки под жилую застройку</h3>
+          <p>Нарезанные участки в массивах с проектом планировки, подъездными дорогами и доступом к сетям.</p>
+          <ul>
+            <li>Отдельный кадастровый номер на участок</li>
+            <li>Целевое назначение — ИЖС или ЛПХ</li>
+            <li>Оформление и регистрация сделки — на нас</li>
+          </ul>
+        </article>
+        <article class="dir">
+          <p class="dir-tag">02 · Бизнесу</p>
+          <h3>Коммерческая и промышленная земля</h3>
+          <p>Площадки под склады, производственные базы, автосервис, придорожный сервис и логистику.</p>
+          <ul>
+            <li>Площадь подбираем под задачу</li>
+            <li>Выезд на трассы и подъезд для грузового транспорта</li>
+            <li>Возможен раздел или объединение участков</li>
+          </ul>
+        </article>
+        <article class="dir">
+          <p class="dir-tag">03 · Инвесторам и партнёрам</p>
+          <h3>Массивы и совместные проекты</h3>
+          <p>Крупные площади под собственный девелопмент — либо вход в проект вместе с нами.</p>
+          <ul>
+            <li>Подбор и проверка массива под запрос</li>
+            <li>Сопровождение смены целевого назначения</li>
+            <li>Раздел, инженерная подготовка, продажа</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kak-rabotaem">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Процесс</p>
+        <h2>Путь массива от покупки до участка с документами</h2>
+        <p class="lede">Каждый массив проходит один и тот же порядок работ. Покупатель подключается на пятом шаге — когда участок уже готов.</p>
+      </div>
+      <div class="process">
+        <article class="step">
+          <p class="step-n">01</p>
+          <h3>Поиск и проверка</h3>
+          <p>Кадастровая история, правоустанавливающие документы, обременения и ограничения на застройку.</p>
+        </article>
+        <article class="step">
+          <p class="step-n">02</p>
+          <h3>Выкуп массива</h3>
+          <p>Земля переходит в собственность компании — дальше все действия ведём как собственник.</p>
+        </article>
+        <article class="step">
+          <p class="step-n">03</p>
+          <h3>Смена целевого назначения</h3>
+          <p>Перевод земли в категорию, которая допускает нужный тип застройки, через уполномоченные органы.</p>
+        </article>
+        <article class="step">
+          <p class="step-n">04</p>
+          <h3>Раздел и подготовка</h3>
+          <p>Проект планировки, межевание, отдельные кадастровые номера, дороги и подвод инженерных сетей.</p>
+        </article>
+        <article class="step">
+          <p class="step-n">05</p>
+          <h3>Продажа и оформление</h3>
+          <p>Договор, регистрация права собственности, при необходимости — рассрочка платежа.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pochemu">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Почему Eco Land</p>
+        <h2>Причины, по которым с нами спокойнее</h2>
+      </div>
+      <div class="why">
+        <article class="why-item is-lead">
+          <span class="badge">Финансирование</span>
+          <h3>Рассрочка без банка</h3>
+          <p>Eco Land входит в группу, где работает собственная микрофинансовая организация «ЭКО-Финанс», поднадзорная АРРФР. Это позволяет обсуждать график платежей напрямую с продавцом земли, а не собирать пакет документов в стороннем банке.</p>
+        </article>
+        <article class="why-item">
+          <h3>Документы до сделки, а не после</h3>
+          <p>Участок выходит в продажу, когда у него уже есть свой кадастровый номер и нужное целевое назначение. Покупателю не приходится самому проходить перевод земли и раздел.</p>
+        </article>
+        <article class="why-item">
+          <h3>Мы остаёмся на массиве</h3>
+          <p>Дороги, сети и благоустройство — часть проекта, а не обещание. После продажи участков компания продолжает вести массив.</p>
+        </article>
+        <article class="why-item">
+          <h3>Группа компаний с 2017 года</h3>
+          <p>Кредитование, склады, гостиницы, вендинг, бизнес-центр — направления, которые работают годами. Земля — одно из них, а не разовый проект.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gruppa">
+    <div class="wrap group-grid">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow">О компании</p>
+        <h2>ТОО «Eco Land» — земельное направление Zhunusov Group</h2>
+        <p class="lede">Группа объединяет несколько самостоятельных бизнесов в Алматы и Астане. Eco Land отвечает в ней за землю: покупку массивов, подготовку и продажу участков.</p>
+      </div>
+      <div class="group-list">
+        <a href="https://eco-finance.kz" target="_blank" rel="noopener">
+          <span class="g-name">МФО «ЭКО-Финанс»</span>
+          <span class="g-what">кредитование</span>
+          <span class="g-dom">eco-finance.kz</span>
+        </a>
+        <a href="https://bastau-logistic.kz" target="_blank" rel="noopener">
+          <span class="g-name">Bastau Logistic</span>
+          <span class="g-what">склады и хранение</span>
+          <span class="g-dom">bastau-logistic.kz</span>
+        </a>
+        <a href="https://bayzakcenter.kz" target="_blank" rel="noopener">
+          <span class="g-name">БЦ «Байзак»</span>
+          <span class="g-what">бизнес-центр, Астана</span>
+          <span class="g-dom">bayzakcenter.kz</span>
+        </a>
+        <a href="https://twinoaks.kz" target="_blank" rel="noopener">
+          <span class="g-name">Twin Oaks Hotel</span>
+          <span class="g-what">гостиница</span>
+          <span class="g-dom">twinoaks.kz</span>
+        </a>
+        <a href="https://kairatrooms.kz" target="_blank" rel="noopener">
+          <span class="g-name">Kairat Rooms</span>
+          <span class="g-what">общежития</span>
+          <span class="g-dom">kairatrooms.kz</span>
+        </a>
+        <a href="https://barysvend.kz" target="_blank" rel="noopener">
+          <span class="g-name">BarysVend</span>
+          <span class="g-what">вендинг</span>
+          <span class="g-dom">barysvend.kz</span>
+        </a>
+        <a href="https://zhunusovgroup.kz" target="_blank" rel="noopener">
+          <span class="g-name">Zhunusov Group</span>
+          <span class="g-what">сайт группы</span>
+          <span class="g-dom">zhunusovgroup.kz</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contacts" id="kontakty">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="section-head" style="margin-bottom:8px">
+          <p class="eyebrow">Контакты</p>
+          <h2>Расскажите, под что нужна земля</h2>
+          <p class="lede">Дом, производство, склад или вложение — от этого зависит и локация, и целевое назначение участка. Позвоните или напишите в WhatsApp, подберём варианты.</p>
+        </div>
+        <dl class="contact-list">
+          <div class="contact-row"><dt>Телефон</dt><dd><a href="tel:+77019522339">+7 701 952 23 39</a></dd></div>
+          <div class="contact-row"><dt>WhatsApp</dt><dd><a href="https://wa.me/77019522339" target="_blank" rel="noopener">Написать в WhatsApp</a></dd></div>
+          <div class="contact-row"><dt>Почта</dt><dd><a href="mailto:info@zhunusovgroup.kz">info@zhunusovgroup.kz</a></dd></div>
+          <div class="contact-row"><dt>Офис</dt><dd>г. Алматы</dd></div>
+        </dl>
+      </div>
+      <aside class="contact-card">
+        <p class="eyebrow">Для партнёров</p>
+        <h3>Продаёте массив или ищете соинвестора?</h3>
+        <p>Рассматриваем земельные массивы в Алматинской области под выкуп, а также совместные проекты по подготовке и продаже участков.</p>
+        <a class="btn btn-primary" href="mailto:info@zhunusovgroup.kz?subject=Предложение%20по%20земельному%20массиву">Отправить предложение</a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-row">
+    <span>© 2026 ТОО «Eco Land»</span>
+    <a href="https://zhunusovgroup.kz" target="_blank" rel="noopener">Часть Zhunusov Group</a>
+    <a href="tel:+77019522339">+7 701 952 23 39</a>
+    <span class="foot-note">Алматы, Казахстан</span>
+  </div>
+</footer>
+</body>
+</html>
