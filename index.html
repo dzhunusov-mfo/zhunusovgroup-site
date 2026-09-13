@@ -247,15 +247,14 @@
     .business-card p{color:var(--muted);margin:0 0 20px}
     .business-card .tag{
       margin-top:auto;
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      display:flex;align-items:center;justify-content:flex-start;gap:20px;flex-wrap:wrap;
       font-size:13px;font-weight:800;color:#47627d;
       text-transform:uppercase;letter-spacing:.07em;
     }
-    .business-card .go{color:var(--blue);font-size:16px;opacity:0;transition:.2s ease}
-    a.business-card:hover .go{opacity:1;transform:translateX(3px)}
-    .tag.multi{justify-content:flex-start;gap:18px;flex-wrap:wrap}
-    .business-card .site{color:var(--blue)}
-    .business-card .site:hover{text-decoration:underline}
+    .business-card .go{color:var(--blue);font-size:16px;transition:.2s ease}
+    a.business-card:hover .go{transform:translateX(3px)}
+    .business-card .site{display:inline-flex;align-items:center;gap:7px;color:#47627d}
+    .business-card .site:hover{color:var(--blue)}
     .business-card .soon{color:#9aa8b5;text-transform:none;letter-spacing:0;font-weight:650}
 
     .principles{
@@ -425,14 +424,14 @@
           <div class="num">01</div>
           <h3>Кредитование</h3>
           <p>Займы малому и среднему бизнесу: оценка заемщика, залоговое обеспечение и работа с портфелем.</p>
-          <div class="tag"><span>ECO-Finance</span><span class="go">&rarr;</span></div>
+          <div class="tag"><span class="site">ECO-Finance <span class="go">&rarr;</span></span></div>
         </a>
 
         <a class="business-card" href="https://bastau-logistic.kz" target="_blank" rel="noopener">
           <div class="num">02</div>
           <h3>Склады и хранение</h3>
           <p>Складские площади в аренду, ответственное хранение и обслуживание промышленной инфраструктуры.</p>
-          <div class="tag"><span>Bastau Logistic</span><span class="go">&rarr;</span></div>
+          <div class="tag"><span class="site">Bastau Logistic <span class="go">&rarr;</span></span></div>
         </a>
 
         <article class="business-card">
@@ -440,8 +439,8 @@
           <h3>Гостиницы и общежития</h3>
           <p>Размещение гостей и долгосрочное проживание: сервис, загрузка номерного фонда и управление объектами.</p>
           <div class="tag multi">
-            <a class="site" href="https://twinoaks.kz" target="_blank" rel="noopener">Twin Oaks Hotel &rarr;</a>
-            <a class="site" href="https://kairatrooms.kz" target="_blank" rel="noopener">Kairat Rooms &rarr;</a>
+            <a class="site" href="https://twinoaks.kz" target="_blank" rel="noopener">Twin Oaks Hotel <span class="go">&rarr;</span></a>
+            <a class="site" href="https://kairatrooms.kz" target="_blank" rel="noopener">Kairat Rooms <span class="go">&rarr;</span></a>
           </div>
         </article>
 
@@ -449,14 +448,14 @@
           <div class="num">04</div>
           <h3>Вендинг</h3>
           <p>Торговые автоматы: установка на локациях, пополнение и обслуживание сети.</p>
-          <div class="tag"><span>BarysVend</span><span class="go">&rarr;</span></div>
+          <div class="tag"><span class="site">BarysVend <span class="go">&rarr;</span></span></div>
         </a>
 
         <a class="business-card" href="https://bayzakcenter.kz" target="_blank" rel="noopener">
           <div class="num">05</div>
           <h3>Бизнес-центр</h3>
           <p>Офисные площади в аренду и управление объектом в Астане.</p>
-          <div class="tag"><span>Bayzak Center</span><span class="go">&rarr;</span></div>
+          <div class="tag"><span class="site">Bayzak Center <span class="go">&rarr;</span></span></div>
         </a>
         <article class="business-card">
           <div class="num">06</div>
