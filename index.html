@@ -218,7 +218,7 @@
     #business{background:#fff}
     .business-grid{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns:repeat(2,1fr);
       gap:18px;
     }
     .business-card{
@@ -246,9 +246,13 @@
     .business-card p{color:var(--muted);margin:0 0 20px}
     .business-card .tag{
       margin-top:auto;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
       font-size:13px;font-weight:800;color:#47627d;
       text-transform:uppercase;letter-spacing:.07em;
     }
+    .business-card .go{color:var(--blue);font-size:16px;opacity:0;transition:.2s ease}
+    a.business-card:hover .go{opacity:1;transform:translateX(3px)}
+    .business-card .soon{color:#9aa8b5;text-transform:none;letter-spacing:0;font-weight:650}
 
     .principles{
       background:var(--ink);color:#fff;
@@ -412,25 +416,32 @@
       </div>
 
       <div class="business-grid">
-        <article class="business-card">
+        <a class="business-card" href="https://eco-finance.kz" target="_blank" rel="noopener">
           <div class="num">01</div>
-          <h3>ECO‑Finance</h3>
-          <p>Финансовые решения для малого и среднего бизнеса. Кредитные процессы, риск‑менеджмент и цифровая операционная инфраструктура.</p>
-          <div class="tag">Financial services</div>
-        </article>
+          <h3>ECO-Finance</h3>
+          <p>Микрофинансовая организация: кредитование малого и среднего бизнеса, риск-менеджмент и цифровая операционная инфраструктура.</p>
+          <div class="tag"><span>Financial services</span><span class="go">&rarr;</span></div>
+        </a>
 
-        <article class="business-card">
+        <a class="business-card" href="https://bastau-logistic.kz" target="_blank" rel="noopener">
           <div class="num">02</div>
           <h3>Bastau Logistik</h3>
-          <p>Управление коммерческой недвижимостью и промышленной инфраструктурой с фокусом на стабильный арендный денежный поток.</p>
-          <div class="tag">Commercial property</div>
-        </article>
+          <p>Складские комплексы и промышленная инфраструктура с фокусом на стабильный арендный денежный поток.</p>
+          <div class="tag"><span>Warehousing</span><span class="go">&rarr;</span></div>
+        </a>
+
+        <a class="business-card" href="https://twinoaks.kz" target="_blank" rel="noopener">
+          <div class="num">03</div>
+          <h3>TwinOaks</h3>
+          <p>Отель: гостиничный бизнес с фокусом на качество сервиса и операционную эффективность.</p>
+          <div class="tag"><span>Hospitality</span><span class="go">&rarr;</span></div>
+        </a>
 
         <article class="business-card">
-          <div class="num">03</div>
-          <h3>Новые проекты</h3>
-          <p>Развитие B2B‑сервисов, технологий и партнерских моделей на стыке финансов, торговли и операционной автоматизации.</p>
-          <div class="tag">New ventures</div>
+          <div class="num">04</div>
+          <h3>БЦ «Байзак»</h3>
+          <p>Бизнес-центр: офисные площади в аренду и управление объектом.</p>
+          <div class="tag"><span>Office real estate</span><span class="soon">сайт скоро</span></div>
         </article>
       </div>
     </div>
