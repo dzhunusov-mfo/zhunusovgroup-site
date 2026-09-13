@@ -253,6 +253,9 @@
     }
     .business-card .go{color:var(--blue);font-size:16px;opacity:0;transition:.2s ease}
     a.business-card:hover .go{opacity:1;transform:translateX(3px)}
+    .tag.multi{justify-content:flex-start;gap:18px;flex-wrap:wrap}
+    .business-card .site{color:var(--blue)}
+    .business-card .site:hover{text-decoration:underline}
     .business-card .soon{color:#9aa8b5;text-transform:none;letter-spacing:0;font-weight:650}
 
     .principles{
@@ -432,12 +435,15 @@
           <div class="tag"><span>Bastau Logistic</span><span class="go">&rarr;</span></div>
         </a>
 
-        <a class="business-card" href="https://twinoaks.kz" target="_blank" rel="noopener">
+        <article class="business-card">
           <div class="num">03</div>
-          <h3>Гостиницы</h3>
-          <p>Гостиничный бизнес: размещение, сервис и управление загрузкой номерного фонда.</p>
-          <div class="tag"><span>Twin Oaks Hotel</span><span class="go">&rarr;</span></div>
-        </a>
+          <h3>Гостиницы и общежития</h3>
+          <p>Размещение гостей и долгосрочное проживание: сервис, загрузка номерного фонда и управление объектами.</p>
+          <div class="tag multi">
+            <a class="site" href="https://twinoaks.kz" target="_blank" rel="noopener">Twin Oaks Hotel &rarr;</a>
+            <a class="site" href="https://kairatrooms.kz" target="_blank" rel="noopener">Kairat Rooms &rarr;</a>
+          </div>
+        </article>
 
         <a class="business-card" href="https://barysvend.kz" target="_blank" rel="noopener">
           <div class="num">04</div>
