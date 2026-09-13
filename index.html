@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zhunusov Group — частная предпринимательская группа из Казахстана. Финансовые услуги, коммерческая недвижимость и новые проекты.">
+  <meta name="theme-color" content="#0b1724">
+  <title>Zhunusov Group — предпринимательская группа, Казахстан</title>
+  <link rel="canonical" href="https://zhunusovgroup.kz/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zhunusov Group">
+  <meta property="og:url" content="https://zhunusovgroup.kz/">
+  <meta property="og:title" content="Zhunusov Group">
+  <meta property="og:description" content="Частная предпринимательская группа из Казахстана: финансовые услуги, коммерческая недвижимость и новые B2B-проекты.">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root{
+      --ink:#0b1724;
+      --muted:#5f6b76;
+      --blue:#1f6feb;
+      --blue2:#5aa7ff;
+      --paper:#f6f8fb;
+      --white:#ffffff;
+      --line:#dfe5ec;
+      --soft:#eaf2ff;
+      --shadow:0 18px 60px rgba(11,23,36,.10);
+      --radius:24px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(246,248,251,.84);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(223,229,236,.8);
+    }
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+    .mark{
+      width:34px;height:34px;border-radius:10px;
+      background:
+        linear-gradient(135deg,var(--blue),var(--blue2));
+      box-shadow:0 8px 24px rgba(31,111,235,.22);
+      position:relative;
+    }
+    .mark:after{
+      content:"";
+      position:absolute;
+      inset:8px;
+      border:2px solid rgba(255,255,255,.88);
+      border-left-color:transparent;
+      border-radius:7px;
+      transform:rotate(45deg);
+    }
+    nav ul{
+      display:flex;align-items:center;gap:28px;
+      margin:0;padding:0;list-style:none;
+      color:#394654;font-size:14px;font-weight:650;
+    }
+    nav a:hover{color:var(--blue)}
+    .cta-small{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:42px;padding:0 17px;border-radius:999px;
+      background:var(--ink);color:#fff;font-weight:750;font-size:14px;
+    }
+
+    .hero{
+      min-height:700px;
+      display:grid;
+      align-items:center;
+      padding:84px 0 68px;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      width:650px;height:650px;
+      right:-190px;top:-120px;
+      border-radius:50%;
+      background:radial-gradient(circle at 40% 40%,rgba(90,167,255,.32),rgba(31,111,235,.06) 55%,transparent 68%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.14fr .86fr;
+      gap:70px;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:8px 12px;
+      border:1px solid #cfdcf2;
+      border-radius:999px;
+      background:rgba(255,255,255,.72);
+      color:#315479;
+      font-size:13px;
+      font-weight:750;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .eyebrow i{
+      display:block;width:7px;height:7px;border-radius:50%;background:var(--blue)
+    }
+    h1{
+      margin:22px 0 22px;
+      font-size:clamp(46px,7vw,90px);
+      line-height:.94;
+      letter-spacing:-.055em;
+      max-width:850px;
+    }
+    h1 span{color:var(--blue)}
+    .lead{
+      max-width:670px;
+      margin:0;
+      color:var(--muted);
+      font-size:clamp(18px,2vw,22px);
+    }
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:52px;padding:0 22px;border-radius:14px;
+      font-weight:800;border:1px solid transparent;
+      transition:.2s ease;
+    }
+    .btn.primary{background:var(--blue);color:#fff;box-shadow:0 12px 30px rgba(31,111,235,.25)}
+    .btn.primary:hover{transform:translateY(-1px);background:#185fc9}
+    .btn.ghost{background:#fff;border-color:var(--line)}
+    .btn.ghost:hover{border-color:#b7c4d2}
+
+    .hero-card{
+      background:linear-gradient(150deg,#0b1724,#13283e);
+      color:#fff;
+      border-radius:32px;
+      padding:36px;
+      box-shadow:0 34px 90px rgba(7,18,30,.22);
+      position:relative;
+      overflow:hidden;
+      min-height:450px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    .hero-card:after{
+      content:"";
+      position:absolute;
+      width:260px;height:260px;border-radius:50%;
+      right:-90px;bottom:-90px;
+      background:radial-gradient(circle,rgba(90,167,255,.55),rgba(31,111,235,.04) 65%);
+    }
+    .hc-label{font-size:13px;color:#9fb5cc;text-transform:uppercase;letter-spacing:.1em;font-weight:800}
+    .hc-title{font-size:36px;line-height:1.05;letter-spacing:-.035em;margin:14px 0 0;max-width:380px}
+    .hc-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px;
+      position:relative;z-index:1;
+    }
+    .hc-item{
+      padding:18px;border-radius:18px;background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .hc-item strong{display:block;font-size:20px;margin-bottom:5px}
+    .hc-item span{color:#b9c7d5;font-size:13px}
+
+    section{padding:100px 0}
+    .section-head{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:55px;
+      align-items:end;
+      margin-bottom:44px;
+    }
+    .kicker{color:var(--blue);font-weight:850;font-size:13px;text-transform:uppercase;letter-spacing:.1em}
+    h2{
+      margin:10px 0 0;
+      font-size:clamp(34px,5vw,60px);
+      line-height:1;
+      letter-spacing:-.045em;
+    }
+    .section-copy{color:var(--muted);font-size:18px;max-width:650px}
+
+    #business{background:#fff}
+    .business-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+    .business-card{
+      padding:30px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:#fff;
+      min-height:310px;
+      display:flex;
+      flex-direction:column;
+      transition:.2s ease;
+    }
+    .business-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+      border-color:#c8d6e4;
+    }
+    .num{
+      width:44px;height:44px;border-radius:14px;
+      background:var(--soft);color:var(--blue);
+      display:grid;place-items:center;font-weight:900;
+      margin-bottom:52px;
+    }
+    .business-card h3{font-size:26px;letter-spacing:-.025em;margin:0 0 12px}
+    .business-card p{color:var(--muted);margin:0 0 20px}
+    .business-card .tag{
+      margin-top:auto;
+      font-size:13px;font-weight:800;color:#47627d;
+      text-transform:uppercase;letter-spacing:.07em;
+    }
+
+    .principles{
+      background:var(--ink);color:#fff;
+    }
+    .principles .section-copy{color:#afbecd}
+    .principle-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+    .principle{
+      min-height:210px;
+      padding:24px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,.11);
+      background:rgba(255,255,255,.035);
+    }
+    .principle b{font-size:16px}
+    .principle p{margin:28px 0 0;color:#aebdca;font-size:14px}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--blue2);margin-bottom:24px}
+
+    .about-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:24px;
+    }
+    .about-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:36px;
+    }
+    .about-card h3{font-size:28px;margin:0 0 14px}
+    .about-card p{margin:0;color:var(--muted);font-size:17px}
+    .about-card.dark{background:#15283b;color:#fff;border-color:#15283b}
+    .about-card.dark p{color:#b7c5d2}
+
+    .contact{
+      padding:90px 0 110px;
+    }
+    .contact-box{
+      border-radius:32px;
+      background:linear-gradient(135deg,#e8f1ff,#f7fbff);
+      border:1px solid #d2e2f5;
+      padding:52px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      align-items:center;
+      gap:40px;
+    }
+    .contact-box h2{margin:0 0 16px}
+    .contact-box p{color:var(--muted);font-size:17px;margin:0}
+    .contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+    .contact-links a{
+      display:inline-flex;
+      padding:13px 16px;
+      background:#fff;
+      border:1px solid #d4dfeb;
+      border-radius:12px;
+      font-weight:750;
+    }
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0 40px;
+      color:#74808c;
+      font-size:13px;
+    }
+    .footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+    .mobile-toggle{display:none;background:none;border:0;font-size:24px;cursor:pointer;color:var(--ink)}
+
+    @media (max-width:900px){
+      .hero{min-height:auto;padding-top:70px}
+      .hero-grid,.section-head,.contact-box{grid-template-columns:1fr}
+      .hero-card{min-height:360px}
+      .business-grid{grid-template-columns:1fr}
+      .principle-grid{grid-template-columns:1fr 1fr}
+      .about-grid{grid-template-columns:1fr}
+      nav ul{
+        display:none;
+        position:absolute;left:20px;right:20px;top:68px;
+        flex-direction:column;align-items:stretch;gap:0;
+        padding:12px;background:#fff;border:1px solid var(--line);
+        border-radius:16px;box-shadow:var(--shadow);
+      }
+      nav ul.open{display:flex}
+      nav li a{display:block;padding:12px}
+      .mobile-toggle{display:block}
+      .cta-small{display:none}
+    }
+
+    @media (max-width:560px){
+      .wrap{width:min(calc(100% - 28px),var(--max))}
+      .nav{min-height:66px}
+      h1{font-size:52px}
+      .hero-card{padding:26px}
+      .hc-grid{grid-template-columns:1fr}
+      section{padding:76px 0}
+      .principle-grid{grid-template-columns:1fr}
+      .contact-box{padding:30px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Zhunusov Group">
+      <span class="mark" aria-hidden="true"></span>
+      <span>Zhunusov Group</span>
+    </a>
+
+    <nav aria-label="Основная навигация">
+      <button class="mobile-toggle" aria-label="Открыть меню" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
+      <ul>
+        <li><a href="#business">Бизнес</a></li>
+        <li><a href="#approach">Подход</a></li>
+        <li><a href="#about">О группе</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <a class="cta-small" href="#contact">Связаться</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><i></i> Казахстан · Алматы</span>
+        <h1>Строим бизнесы <span>на долгий срок.</span></h1>
+        <p class="lead">Zhunusov Group — частная предпринимательская группа, развивающая финансовые сервисы, коммерческую недвижимость и новые B2B‑проекты.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#business">Наши направления</a>
+          <a class="btn ghost" href="#contact">Контакты</a>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Ключевой фокус">
+        <div>
+          <div class="hc-label">Zhunusov Group</div>
+          <div class="hc-title">Предпринимательство с фокусом на устойчивые денежные потоки и операционную эффективность.</div>
+        </div>
+        <div class="hc-grid">
+          <div class="hc-item"><strong>Finance</strong><span>финансовые решения для бизнеса</span></div>
+          <div class="hc-item"><strong>Property</strong><span>коммерческая инфраструктура</span></div>
+          <div class="hc-item"><strong>B2B</strong><span>новые продукты и партнерства</span></div>
+          <div class="hc-item"><strong>Digital</strong><span>автоматизация процессов</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="business">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Бизнес</div>
+          <h2>Ключевые направления</h2>
+        </div>
+        <p class="section-copy">Группа объединяет операционные проекты, в которых важны понятная экономика, качественное управление риском и долгосрочная ценность активов.</p>
+      </div>
+
+      <div class="business-grid">
+        <article class="business-card">
+          <div class="num">01</div>
+          <h3>ECO‑Finance</h3>
+          <p>Финансовые решения для малого и среднего бизнеса. Кредитные процессы, риск‑менеджмент и цифровая операционная инфраструктура.</p>
+          <div class="tag">Financial services</div>
+        </article>
+
+        <article class="business-card">
+          <div class="num">02</div>
+          <h3>Bastau Logistik</h3>
+          <p>Управление коммерческой недвижимостью и промышленной инфраструктурой с фокусом на стабильный арендный денежный поток.</p>
+          <div class="tag">Commercial property</div>
+        </article>
+
+        <article class="business-card">
+          <div class="num">03</div>
+          <h3>Новые проекты</h3>
+          <p>Развитие B2B‑сервисов, технологий и партнерских моделей на стыке финансов, торговли и операционной автоматизации.</p>
+          <div class="tag">New ventures</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="principles" id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">Подход</div>
+          <h2>Как мы принимаем решения</h2>
+        </div>
+        <p class="section-copy">Рост имеет смысл только тогда, когда он опирается на прозрачную экономику и управляемый риск.</p>
+      </div>
+
+      <div class="principle-grid">
+        <div class="principle">
+          <div class="dot"></div>
+          <b>Экономика прежде масштаба</b>
+          <p>Сначала рабочая модель и денежный поток, затем ускорение роста.</p>
+        </div>
+        <div class="principle">
+          <div class="dot"></div>
+          <b>Контроль риска</b>
+          <p>Решения строятся вокруг качества активов, обеспечения и возвратности капитала.</p>
+        </div>
+        <div class="principle">
+          <div class="dot"></div>
+          <b>Технологии как инструмент</b>
+          <p>Автоматизация должна снижать ручную работу и повышать качество управления.</p>
+        </div>
+        <div class="principle">
+          <div class="dot"></div>
+          <b>Долгосрочное владение</b>
+          <p>Фокус на устойчивых бизнесах и активах, способных создавать ценность годами.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker">О группе</div>
+          <h2>Локальная экспертиза. Предпринимательский подход.</h2>
+        </div>
+        <p class="section-copy">Zhunusov Group работает в Казахстане и развивает проекты, где собственник глубоко вовлечен в стратегию, финансы и ключевые операционные решения.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Что мы ищем</h3>
+          <p>Проекты с понятным клиентским спросом, сильной экономикой единицы бизнеса, возможностью улучшить процессы и потенциалом для долгосрочного роста.</p>
+        </div>
+        <div class="about-card dark">
+          <h3>Партнерства</h3>
+          <p>Открыты к диалогу с финансовыми институтами, собственниками бизнеса и технологическими партнерами, если интересы сторон совпадают на длинном горизонте.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <div>
+          <div class="kicker">Контакты</div>
+          <h2>Связаться с Zhunusov Group</h2>
+          <p>Для деловых предложений, партнерств и инвестиционных вопросов.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:info@zhunusovgroup.kz">info@zhunusovgroup.kz</a>
+          <span>Алматы, Казахстан</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <span>© <span id="year"></span> Zhunusov Group</span>
+    <span>zhunusovgroup.kz</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      const menu = document.querySelector('nav ul');
+      if (menu) menu.classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
