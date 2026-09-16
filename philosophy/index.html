@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Инвестиционная философия Zhunusov Group: во что инвестирует группа, как выбирает активы, как относится к партнёрству, долгу и риску.">
+  <meta name="theme-color" content="#0b1724">
+  <title>Инвестиционная философия — Zhunusov Group</title>
+  <link rel="canonical" href="https://zhunusovgroup.kz/philosophy/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Zhunusov Group">
+  <meta property="og:url" content="https://zhunusovgroup.kz/philosophy/">
+  <meta property="og:title" content="Инвестиционная философия — Zhunusov Group">
+  <meta property="og:description" content="Мы строим активы, а не коллекцию проектов. Принципы, по которым группа выбирает инвестиции, партнёров и уровень риска.">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root{
+      --ink:#0b1724;
+      --muted:#5f6b76;
+      --blue:#1f6feb;
+      --blue2:#5aa7ff;
+      --paper:#f6f8fb;
+      --line:#dfe5ec;
+      --soft:#eaf2ff;
+      --shadow:0 18px 60px rgba(11,23,36,.10);
+      --radius:24px;
+      --max:1180px;
+      --text:840px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+    .col{width:min(calc(100% - 40px),var(--text));margin:0 auto}
+
+    header{
+      position:sticky;top:0;z-index:30;
+      background:rgba(246,248,251,.84);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(223,229,236,.8);
+    }
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{
+      display:flex;align-items:center;gap:12px;
+      font-weight:800;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;
+    }
+    .mark{
+      width:34px;height:34px;border-radius:10px;
+      background:linear-gradient(135deg,var(--blue),var(--blue2));
+      box-shadow:0 8px 24px rgba(31,111,235,.22);
+      position:relative;
+    }
+    .mark:after{
+      content:"";position:absolute;inset:8px;
+      border:2px solid rgba(255,255,255,.88);
+      border-left-color:transparent;border-radius:7px;transform:rotate(45deg);
+    }
+    .back{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:14px;font-weight:700;color:#394654;
+    }
+    .back:hover{color:var(--blue)}
+
+    .head{padding:84px 0 56px;position:relative;overflow:hidden}
+    .head:before{
+      content:"";position:absolute;
+      width:620px;height:620px;right:-200px;top:-180px;border-radius:50%;
+      background:radial-gradient(circle at 40% 40%,rgba(90,167,255,.30),rgba(31,111,235,.05) 55%,transparent 68%);
+      pointer-events:none;
+    }
+    .kicker{
+      color:var(--blue);font-weight:850;font-size:13px;
+      text-transform:uppercase;letter-spacing:.1em;
+    }
+    h1{
+      margin:14px 0 18px;
+      font-size:clamp(40px,6vw,74px);
+      line-height:.98;letter-spacing:-.05em;
+      position:relative;z-index:1;
+    }
+    .sub{
+      margin:0;color:var(--muted);font-size:19px;max-width:640px;
+      position:relative;z-index:1;
+    }
+
+    main{padding-bottom:40px}
+    section{padding:52px 0}
+    section + section{border-top:1px solid var(--line)}
+    h2{
+      margin:0 0 20px;
+      font-size:clamp(28px,3.6vw,40px);
+      line-height:1.08;letter-spacing:-.035em;
+    }
+    h3{font-size:20px;letter-spacing:-.02em;margin:0 0 8px}
+    p{margin:0 0 16px;font-size:17px;color:#2b3a49}
+    p.lead{font-size:20px;color:var(--ink)}
+    .muted{color:var(--muted)}
+    ul{margin:0 0 16px;padding-left:22px}
+    li{margin-bottom:9px;font-size:17px;color:#2b3a49}
+
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+    .card{
+      background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+      padding:28px;transition:.2s ease;
+    }
+    .card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#c8d6e4}
+    .card .num{
+      width:38px;height:38px;border-radius:12px;
+      background:var(--soft);color:var(--blue);
+      display:grid;place-items:center;font-weight:900;font-size:14px;margin-bottom:18px;
+    }
+    .card p{font-size:16px;margin:0}
+    .card p + p{margin-top:10px}
+
+    .qa{margin-top:24px}
+    .qa .item{padding:20px 0;border-bottom:1px solid var(--line)}
+    .qa .item:last-child{border-bottom:0}
+    .qa b{display:block;font-size:19px;letter-spacing:-.02em;margin-bottom:6px}
+    .qa span{color:var(--muted);font-size:16px}
+
+    .pull{
+      background:linear-gradient(135deg,#e8f1ff,#f7fbff);
+      border:1px solid #d2e2f5;border-radius:32px;
+      padding:44px;
+    }
+    .pull .big{
+      font-size:clamp(24px,3.2vw,34px);
+      line-height:1.15;letter-spacing:-.03em;font-weight:800;margin:0 0 16px;
+    }
+    .pull p{margin:0;color:#41526380}
+    .pull p{color:#425263}
+
+    .values{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+    .value{
+      background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;
+    }
+    .value .dot{width:9px;height:9px;border-radius:50%;background:var(--blue);margin-bottom:14px}
+    .value b{font-size:17px}
+    .value p{margin:6px 0 0;font-size:15px;color:var(--muted)}
+
+    .dark{
+      background:var(--ink);color:#fff;border-radius:32px;padding:52px;margin:60px 0 0;
+    }
+    .dark .tagline{
+      color:#9fb5cc;font-size:13px;font-weight:800;
+      text-transform:uppercase;letter-spacing:.14em;margin:0 0 18px;
+    }
+    .dark h2{margin-bottom:16px}
+    .dark p{color:#b7c5d2;font-size:18px;margin:0}
+    .dark p + p{margin-top:12px}
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0 40px;color:#74808c;font-size:13px;margin-top:60px;
+    }
+    .footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+    @media (max-width:900px){
+      .cards,.values{grid-template-columns:1fr}
+      .head{padding-top:60px}
+      .pull,.dark{padding:32px;border-radius:24px}
+    }
+    @media (max-width:560px){
+      .wrap,.col{width:min(calc(100% - 28px),var(--max))}
+      .nav{min-height:66px}
+      h1{font-size:40px}
+      section{padding:40px 0}
+      .pull,.dark{padding:26px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Zhunusov Group">
+      <span class="mark" aria-hidden="true"></span>
+      <span>Zhunusov Group</span>
+    </a>
+    <a class="back" href="/">&larr; На главную</a>
+  </div>
+</header>
+
+<div class="head">
+  <div class="col">
+    <div class="kicker">Инвестиционная декларация Zhunusov Group</div>
+    <h1>Инвестиционная философия</h1>
+    <p class="sub">Принципы, по которым группа выбирает активы, партнёров и уровень риска.</p>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="col">
+      <h2>Мы строим активы, а не коллекцию проектов</h2>
+      <p class="lead">Zhunusov Group — частная инвестиционная группа, которая создаёт, приобретает и развивает бизнесы и реальные активы с долгосрочным горизонтом.</p>
+      <p>Наша задача — не максимизировать количество компаний и сделок. Мы стремимся формировать портфель качественных активов, которые:</p>
+      <ul>
+        <li>создают устойчивый денежный поток;</li>
+        <li>растут в стоимости;</li>
+        <li>имеют понятную экономику;</li>
+        <li>способны работать без постоянного участия собственника;</li>
+        <li>могут сохраняться и развиваться десятилетиями.</li>
+      </ul>
+      <p>Мы рассматриваем капитал как единую систему и принимаем решения исходя не только из потенциальной доходности, но также из риска, ликвидности, управляемости и времени, которое требует актив.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Наша цель</h2>
+      <p>Создать устойчивую частную инвестиционную группу, способную сохранять, увеличивать и передавать капитал следующим поколениям.</p>
+      <p>Для нас рост капитала — не самоцель. Капитал должен давать владельцам свободу, создавать новые возможности и обеспечивать устойчивость независимо от экономических циклов.</p>
+      <p>Поэтому мы предпочитаем долгосрочное создание стоимости краткосрочной максимизации прибыли.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Во что мы инвестируем</h2>
+      <p>Мы инвестируем прежде всего туда, где понимаем экономику бизнеса и можем влиять на результат.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>Недвижимость и инфраструктура</h3>
+          <p>Коммерческая недвижимость, бизнес-центры, производственные базы, склады и другие объекты, способные создавать устойчивый арендный денежный поток.</p>
+          <p class="muted">Особенно интересны активы, стоимость которых можно увеличить за счёт управления, реконструкции, изменения назначения, повышения загрузки или более эффективного использования территории.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">02</div>
+          <h3>Гостиничный бизнес</h3>
+          <p>Гостиницы и объекты размещения с понятной экономикой, сильной локацией и потенциалом создания сети.</p>
+          <p class="muted">Мы предпочитаем проекты, где операционное управление может быть передано профессиональной команде или партнёру.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">03</div>
+          <h3>Производство, дистрибуция и вендинг</h3>
+          <p>Бизнесы, в которых можно объединить производство, импорт, дистрибуцию, розницу и сервис в единую вертикально интегрированную систему.</p>
+          <p class="muted">Нам особенно интересны модели, которые можно масштабировать без пропорционального увеличения управленческой нагрузки.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">04</div>
+          <h3>Финансовые услуги</h3>
+          <p>Финансовые компании с понятной моделью управления риском, качественным обеспечением и дисциплинированной системой фондирования.</p>
+          <p class="muted">Мы рассматриваем финансовый бизнес прежде всего как систему управления капиталом и риском, а не как погоню за максимальной процентной доходностью.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">05</div>
+          <h3>Земля и специальные ситуации</h3>
+          <p>Земельные участки и недооценённые активы, где стоимость можно существенно увеличить посредством изменения назначения, разделения, инфраструктурного развития или другой трансформации.</p>
+          <p class="muted">Отдельное направление — залоговые, проблемные и непрофильные активы банков и компаний, которые можно приобрести, реструктурировать, запустить и превратить в работающие активы.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">06</div>
+          <h3>Ликвидные финансовые активы</h3>
+          <p>Часть капитала группы размещается в ликвидных инструментах и международных активах.</p>
+          <p class="muted">Их задача — не заменить операционные бизнесы группы, а обеспечить ликвидность, валютную и географическую диверсификацию капитала.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Как мы выбираем инвестиции</h2>
+      <p>Каждая инвестиция должна отвечать на несколько простых вопросов.</p>
+
+      <div class="qa">
+        <div class="item">
+          <b>На чём здесь создаётся стоимость?</b>
+          <span>Мы должны понимать механизм получения прибыли.</span>
+        </div>
+        <div class="item">
+          <b>Почему у нас есть преимущество?</b>
+          <span>Это может быть капитал, управление, отраслевой опыт, доступ к активу, партнёр, сеть или способность решить проблему, которую предыдущий собственник решить не смог.</span>
+        </div>
+        <div class="item">
+          <b>Что является главным риском?</b>
+          <span>Мы заранее определяем сценарий, при котором инвестиционная гипотеза окажется ошибочной.</span>
+        </div>
+        <div class="item">
+          <b>Кто управляет активом?</b>
+          <span>Хороший актив не должен бесконечно зависеть от ежедневного участия акционера.</span>
+        </div>
+        <div class="item">
+          <b>Как мы выйдем из инвестиции?</b>
+          <span>Условия выхода обсуждаются ещё до входа.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <div class="pull">
+        <div class="kicker">Наш главный инвестиционный принцип</div>
+        <p class="big" style="margin-top:14px">Мы покупаем не низкую цену. Мы покупаем возможность создать стоимость.</p>
+        <p>Дешёвый актив может оставаться дешёвым десятилетиями. Поэтому нам интересен актив только тогда, когда мы понимаем, что именно способно изменить его экономику или стоимость.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Контроль и партнёрство</h2>
+      <p>Zhunusov Group активно работает с партнёрами. Мы считаем, что сильный партнёр может быть ценнее дополнительного капитала. Но партнёрство должно быть построено на понятных правилах.</p>
+      <p>До начала проекта должны быть определены: роли сторон, вклад каждого партнёра, полномочия, распределение прибыли, порядок финансирования, правила принятия ключевых решений и условия выхода из партнёрства.</p>
+      <p>Мы не считаем обязательным владеть 100% бизнеса. Для нас важнее другое: мы должны понимать, кто контролирует ключевые решения и как защищён капитал всех партнёров.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Наше отношение к долгу</h2>
+      <p>Мы рассматриваем долг как финансовый инструмент, а не как источник роста сам по себе. Заёмный капитал оправдан тогда, когда существует актив или бизнес, который способен самостоятельно обслуживать этот долг.</p>
+      <p>Мы стремимся избегать ситуаций, когда долг одного актива приходится обслуживать денежным потоком другого. Рост не должен ставить под угрозу устойчивость всей группы.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Капитал и риск</h2>
+      <p>Первый принцип управления капиталом — не потерять способность продолжать игру. Поэтому мы не ставим существование группы на одну инвестицию, одного партнёра или один сценарий.</p>
+      <p>Мы диверсифицируем капитал не количеством компаний, а типами риска. Несколько бизнесов в одной стране и одной экономике не являются полной диверсификацией.</p>
+      <p>По мере роста группы мы увеличиваем долю международных и ликвидных активов.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Время собственника</h2>
+      <p>Для нас капитал и время имеют одинаковую ценность. Инвестиция, которая приносит высокую доходность, но постоянно требует участия владельца, не всегда является хорошей инвестицией.</p>
+      <p>Поэтому один из ключевых показателей зрелости бизнеса — его способность работать через систему, команду и партнёров.</p>
+      <p>Наша задача — постепенно превращать компании: из бизнеса владельца → в бизнес команды → в инвестиционный актив.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Наши ценности</h2>
+      <div class="values">
+        <div class="value">
+          <div class="dot"></div>
+          <b>Долгосрочность</b>
+          <p>Мы готовы владеть хорошим активом много лет.</p>
+        </div>
+        <div class="value">
+          <div class="dot"></div>
+          <b>Ответственность</b>
+          <p>Каждая инвестиция рассматривается как собственный капитал, который необходимо сохранить прежде, чем заработать на нём.</p>
+        </div>
+        <div class="value">
+          <div class="dot"></div>
+          <b>Партнёрство</b>
+          <p>Мы стремимся строить отношения, где экономический интерес сторон понятен и справедлив.</p>
+        </div>
+        <div class="value">
+          <div class="dot"></div>
+          <b>Контроль риска</b>
+          <p>Доходность никогда не рассматривается отдельно от риска её получения.</p>
+        </div>
+        <div class="value">
+          <div class="dot"></div>
+          <b>Простота</b>
+          <p>Если мы не можем понятно объяснить экономику инвестиции, мы в неё не входим.</p>
+        </div>
+        <div class="value">
+          <div class="dot"></div>
+          <b>Фокус</b>
+          <p>Мы предпочитаем несколько сильных направлений большому количеству проектов.</p>
+        </div>
+        <div class="value">
+          <div class="dot"></div>
+          <b>Системность</b>
+          <p>Задача собственника — не выполнять работу системы, а создавать систему, которая способна работать без него.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Чего мы стараемся избегать</h2>
+      <p>Мы не стремимся участвовать в проектах только потому, что они популярны или обещают быструю доходность. Мы особенно осторожны с бизнесами, где:</p>
+      <ul>
+        <li>экономика слишком сложна или непрозрачна;</li>
+        <li>невозможно определить источник долгосрочного преимущества;</li>
+        <li>проект полностью зависит от одного человека;</li>
+        <li>партнёрские отношения не оформлены;</li>
+        <li>существует чрезмерная долговая нагрузка;</li>
+        <li>невозможно заранее определить сценарий выхода;</li>
+        <li>высокая доходность является компенсацией за риск, который невозможно контролировать.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>География</h2>
+      <p>Основная территория деятельности Zhunusov Group — Казахстан и Центральная Азия.</p>
+      <p>При этом часть капитала постепенно размещается за пределами региона для валютной, страновой и рыночной диверсификации.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <h2>Наш подход к сделкам</h2>
+      <p>Мы открыты к следующим форматам:</p>
+      <ul>
+        <li>приобретение бизнеса или недвижимости;</li>
+        <li>инвестиции в действующие компании;</li>
+        <li>совместные предприятия;</li>
+        <li>партнёрства с предпринимателями;</li>
+        <li>выкуп залоговых и проблемных активов;</li>
+        <li>финансирование трансформации недвижимости;</li>
+        <li>создание новых компаний вместе с отраслевыми партнёрами.</li>
+      </ul>
+      <p>Для нас особенно интересна ситуация, когда у одной стороны есть хороший актив или компетенция, а у другой — капитал, структура, управление и возможность масштабирования.</p>
+
+      <div class="dark">
+        <p class="tagline">Капитал · Партнёрство · Системы · Долгосрочное владение</p>
+        <h2>Zhunusov Group</h2>
+        <p>Мы не стремимся сделать максимальное количество инвестиций.</p>
+        <p>Мы стремимся владеть небольшим количеством сильных активов, понимать их глубже других и постепенно превращать их в систему, способную работать поколениями.</p>
+        <p style="margin-top:26px"><a href="/#contact" style="color:#5aa7ff;font-weight:750">Обсудить партнёрство &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <span>© <span id="year"></span> Zhunusov Group</span>
+    <span>zhunusovgroup.kz · сайт использует Яндекс.Метрику</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112548495', 'ym');
+
+    ym(112548495, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112548495" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

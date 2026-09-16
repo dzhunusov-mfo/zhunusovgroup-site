@@ -7,4 +7,10 @@
     <priority>1.0</priority>
   </url>
   <url><loc>https://zhunusovgroup.kz/eco-land/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://zhunusovgroup.kz/philosophy/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
